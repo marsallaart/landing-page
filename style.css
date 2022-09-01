@@ -45,12 +45,12 @@ header {
 
 /* Animation */
 .anim-typewriter{
-animation: typewriter 4s steps(44) 1s 1 normal both,
+animation: typewriter 2s steps(25) 1s 1 normal both,
            blinkTextCursor 500ms steps(3) infinite normal;
 }
 @keyframes typewriter{
 from{width: 0;}
-to{width: 21em;}
+to{width: 9.5em;}
 }
 @keyframes blinkTextCursor{
 from{border-right-color: rgba(255,255,255,.75);}
@@ -110,9 +110,9 @@ h1 {
       display:block;
   }
   #popup{
-      padding: 3%;
-      font-size: 1.2em;
-      font-family: 'orator';
+      text-align: left;
+      padding: 2%;
+      font-size: 1.1em;
       display: none;
       background-color:rgba(245, 245, 245, 0.699);
       border:1px solid #000;
