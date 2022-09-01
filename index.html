@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,8 +15,20 @@
     </header>
         
     <div class="box">
-        
-        <div class="button1" onclick="location.href='art.html'">Sobre</div>
+        <div id="popup">
+           
+        Olá.
+        <br>
+        Aqui você encontra o meu portfolio com obras finalizadas e detalhes do processo de algumas peças.
+        <br>
+        Você pode, também, visitar a minha loja online, onde você pode comprar prints das minhas artes e muitas outras coisas!
+        <br>
+        Tenha uma boa viagem!
+        <br>
+        <button id="closeOverlay">[X]</button>
+        </div>
+    <div id="backgroundOverlay"></div>
+        <div class="button1" id="openOverlay" value="open popup">Sobre</div>
         <div class="hide"><img src="data/imgs/headers/dmg.gif"></div>
         <div class="button1" onclick="location.href='http://marsnil.tumblr.com/'">Portfolio</div>
         <div class="hide"><img src="data/imgs/headers/marsalla.gif"></div>
@@ -24,7 +36,31 @@
         <div class="hide"><img src="data/imgs/headers/kozmo.gif"></div>
          
     </div>
- 
+    <script>
+      
+        window.onload = function(){
+	var popup = document.getElementById('popup');
+    var overlay = document.getElementById('backgroundOverlay');
+    var openButton = document.getElementById('openOverlay');
+    var closeButton = document.getElementById('closeOverlay');
+    document.onclick = function(e){
+        if(e.target.id == 'backgroundOverlay'){
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+        if(e.target === openButton){
+         	popup.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+        if(e.target === closeButton){
+         	popup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+        
+    };
+};
+        
+        </script>
     
     
 </body>

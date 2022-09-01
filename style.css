@@ -1,4 +1,10 @@
+@font-face {
+  font-family: Orator;
+  src: url(data/fonts/Orator/OratorStd-Slanted.otf);
+}
+
 @charset "UTF-8"
+
 
 @media screen and (max-width: 600px) {
     .column {
@@ -6,6 +12,9 @@
       }
     }
   
+    
+
+
 body {
     background-size:100% 100vh;
     background-image:url(data/imgs/stars-gif.gif);
@@ -17,6 +26,7 @@ header {
   margin-top: 3%;
   color: white ;
   text-align: center;
+  font-family: 'Orator';
 }
 
 .line-1{
@@ -26,7 +36,7 @@ header {
   width: 10em;
   margin: 0 auto;
   border-right: 2px solid rgba(255,255,255,.75);
-  font-size: 180%;
+  font-size: 1.5em;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
@@ -40,7 +50,7 @@ animation: typewriter 4s steps(44) 1s 1 normal both,
 }
 @keyframes typewriter{
 from{width: 0;}
-to{width: 14em;}
+to{width: 21em;}
 }
 @keyframes blinkTextCursor{
 from{border-right-color: rgba(255,255,255,.75);}
@@ -86,11 +96,51 @@ h1 {
         margin-left: 20%;
         
 
-}
-    .typed {
-      color: white;
-      
-}
+    }
+   
+    #backgroundOverlay{
+      pointer-events: none;
+      display:none;
+      background-color:transparent;
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      display:block;
+  }
+  #popup{
+      padding: 3%;
+      font-size: 1.2em;
+      font-family: 'orator';
+      display: none;
+      background-color:rgba(245, 245, 245, 0.699);
+      border:1px solid #000;
+      border-radius: 30px;
+      width:60%;
+      height:auto;
+      position:absolute;
+      margin-left:10vw;
+      margin-right:10vw;
+      margin-top:10vh;
+      margin-bottom:10vh;
+      z-index:500;
+  }
+  
+  #closeOverlay{
+    color: black;
+    background-color:rgba(245, 245, 245, 0.699);
+    border:none;
+    padding: 1em;
+    margin: 2%;
+    text-align: center;
+    float: right;
+    transition-duration: 0.7s;
+  }
+  #closeOverlay:hover {
+    background-color:rgba(0, 0, 0, 0.719);
+    color: white;
+  }
 
     .button1 {
         cursor: pointer;
